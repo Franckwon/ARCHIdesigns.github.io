@@ -1,0 +1,512 @@
+ *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman';
+}
+.header{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)), url(ModernHouse.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+nav{
+    width: 85%;
+    padding: auto;
+    margin: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav img{
+    width: 160px;
+    cursor: pointer;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+}
+.nav-links ul li::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    background: #02abdf;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid #02abdf;
+    background: #02abdf;
+    transition: 1.5s;
+}
+
+nav .fa{
+    display: none;
+}
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: fixed;
+        background: #02abdf;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: #02abdf;
+        margin: 10px;
+        font-size: 34px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+
+    }
+}
+  
+
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p{
+    color: #686868;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.course-col{
+    flex-basis: 31%;
+    background: rgba(0, 147, 226, 0.66);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.632);
+}
+
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+.design{
+    width: 80%;
+    margin: auto;
+    text-align:center;
+    padding-top: 50px;
+}
+.design-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.design-col img{
+    width: 100%;
+    display: block;
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    transition: 0.5s
+}
+.layer:hover{
+    background: rgba(0, 147, 226, 0.66);
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+
+.office{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.office-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+.office-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+.office-col p{
+    padding: 0;
+}
+.office-col h3{
+    margin-bottom: 15px;
+    margin-top: 16px;
+    text-align: left;
+}
+
+.recommendation{
+    width: 80%;
+    margin:auto;
+    padding-top: 100px;
+    text-align: center;
+}
+.recommendation-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #00d9ffb0;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+.recommendation-col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.recommendation-col p{
+    padding: 0;
+}
+.recommendation-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+.recommendation-col .fa{
+    color: #ffea00;
+}
+
+
+
+.recommendations{
+    width: 80%;
+    margin:auto;
+    padding-top: 100px;
+    text-align: center;
+}
+.recommendations-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #00d9ffb0;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+.recommendations-col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.recommendations-col p{
+    padding: 0;
+}
+.recommendations-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+.reccomendations-col .fa{
+    color: #ffea00;
+}
+@media(max-width: 700px){
+    .recommendation-col img{
+        margin-left: 0px;
+        margin-right: 15px;
+    }
+    .recommendations-col img{
+        margin-left: 0px;
+        margin-right: 15px;
+    }
+}
+
+.cta{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)), url(ModernFurniture.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 100px 0;
+}
+.cta h1{
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+@media(max-width: 700px){
+    .cta h1{
+        font-size: 24px;
+    }
+}
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+.footer h1{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.icons .fa{
+    color: #ffea00;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+
+}
+.fa-pencil{
+    color: #ffea00;
+}
+
+.sub-header{
+    height: 50vh;
+    width: 100%;
+    background-image:  linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)), url(About.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.sub-header h1{
+    margin-top: 100px;
+}
+.aboutus{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.aboutus-col{
+    flex: 48%;
+    padding: 30px 2px;
+}
+.aboutus-col img{
+    width: 100%;
+}
+.aboutus-col h1{
+    padding-top: 0;
+}
+.aboutus-col p{
+    padding: 15px 0 25px;
+}
+.skyblue-btn{
+    border: 1px solid #00d9ffb0;
+    background: transparent;
+    color: #00d9ffb0;
+}
+.skyblue-btn:hover{
+    color: #fff;
+}
+
+.structure-content{
+    width: 80%;
+    margin: auto;
+    padding: 60px 0;
+}
+.structure-left{
+    flex-basis: 65%;
+}
+.structure-left img{
+    width: 100%;
+}
+.structure-left h2{
+    color: #00d9ffb0;
+    font-weight: 600;
+    margin: 30px 0;
+}
+.structure-left p{
+    color: #999;
+    padding: 0;
+}
+.structure-right{
+    flex-basis: 32%;
+}
+.structure-right h3{
+    background: #00d9ffb0;
+    color: #fff;
+    padding: 7px 0;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.structure-right div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color:#02abdf;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.comment-box{
+    border: 1px solid #ccc;
+    margin: 50px 0;
+    padding: 10px 20px;
+}
+.comment-box h3{
+    text-align: left;
+}
+.comment-form input, .comment-form textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+
+}
+.comment-form{
+    margin: 10px 0;
+}
+
+@media(max-width: 700px){
+    .sub-header h1{
+        font-size: 21px;
+    }
+}
+.location{
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+.location iframe{
+    width: 100%;
+}
+.contactus{
+    width: 80%;
+    margin: auto;
+}
+.contact-col{
+    flex-basis: 48%;
+    margin-bottom: 30px;
+}
+.contact-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.contact-col div .fa{
+    font-size: 28px;
+    color: #00d9ffb0;
+    margin: 10px;
+    margin-right: 30px;
+}
+.contact-col div p{
+    padding: 0;
+}
+.contact-col div h5{
+    font-size: 20px;
+    margin-bottom: 5px;
+    color:#686868;
+    font-weight: 400;
+}
+.contact-col input, .contact-col textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
